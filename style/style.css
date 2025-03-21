@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 100%;
+    margin-bottom: 5%;
+  
+}
+
+#titulo{
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+main{
+    font-family: "hammersmith one", sans-serif;
+    display: flex;
+    flex-direction: row;
+    margin: 3%;
+
+}
+
+.detalhes{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 1%;
+    margin-right: 5%;
+    width: 60%;
+    gap: 25%;
+}
+
+
+.sobreMim{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 1%;
+    width: 40%;
+    margin-right: 15%;
+    gap: 45%;
+
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    
+}
+
+button{
+    width: 50%;
+    padding: 2% 3%;
+}
+
+.imagem{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 40%;
+    border: 5px solid #711414;
+    height: 500px;
+    padding: 1%;
+    gap: 5%;
+}
+
+.imagem img{
+    border-radius: 50px;
+    align-self: center;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    padding: 4%;
+    margin-top: 7%;
+    background-color: #38323E;
+    font-family: "Hammersmith One", sans-serif;
+    color: #ffffff;
+}
+
+button{
+    display: inline-block;
+    background-color: #ffffff;
+    border: solid 1px #711414;
+    border-radius: 30px;
+    width: 70%;
+    font-family: "Hammersmith One", sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main{
+        flex-direction: column-reverse;
+    }
+
+    .detalhes, .sobreMim {
+        text-align: center;
+        width: 100%;
+        padding: 4%;
+    }
+
+    .imagem {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    button {
+        display: block;
+        width: 50%;
+        padding: 15px;
+    }
+}
