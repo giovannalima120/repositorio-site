@@ -1,30 +1,59 @@
+:root{
+    --bg-color: #ffffff;
+    --bg-footer-color: #38323E;
+    --text-color: #000000;
+    --button-bg:  #ffffff;
+    --button-text: #711414;
+    --font-size-base: clamp(0.75rem, 0.571rem + 0.476vw, 1rem);
+    --font-size-large: clamp(2rem, 1.286rem + 1.905vw, 3rem);
+    --button-padding: clamp(1rem, 0.643rem + 0.952vw, 1.5rem);
+}
+
+.dark-mode:root {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --button-bg: #ff9800;
+    --button-text: #000000;
+  }
+
 *{
     padding: 0;
     box-sizing: border-box;
     text-decoration: none
 }
 
-header{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    text-align: center;
+body{
+    background-color: var(--bg-color);
+    color:var(--text-color);
     font-family: "Lexend", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-size: 100%;
+    font-size: var(--font-size-base);
+}
+h1{
+    font-size: var(--font-size-large);
+}
+header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     margin-bottom: 5%;
-  
+}
+
+section{
+    padding: clamp(20px, 5vw, 50px);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    
 }
 
 #titulo{
-    font-family: "Hammersmith One", sans-serif;
-    font-size: 150%;
+    font-size: var(--font-size-large);
     font-weight: bold;
 }
 
 main{
-    font-family: "hammersmith one", sans-serif;
     display: flex;
     flex-direction: row;
     margin: 3%;
@@ -32,47 +61,43 @@ main{
 }
 
 .detalhes{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
     padding: 1%;
     margin-right: 5%;
     width: 60%;
-    gap: 25%;
 }
 
 
 .sobreMim{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
     padding: 1%;
     width: 40%;
     margin-right: 15%;
-    gap: 45%;
 
 }
 
 .button-container{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     
 }
 
 button{
-    width: 50%;
-    padding: 2% 3%;
+    margin: 2%;
+    font-family: "Lexend", sans-serif;
+    width: 70%;
+    padding: var(--button-padding);
+    background-color: var(--button-bg);
+    display: inline-block;
+    border: solid 1px #711414;
+    border-radius: 30px;   
 }
 
 .imagem{
-    display: flex;
-    flex-direction: column;
     text-align: center;
     width: 40%;
     border: 5px solid #711414;
     height: 500px;
     padding: 1%;
-    gap: 5%;
 }
 
 .imagem img{
@@ -85,19 +110,11 @@ footer{
     justify-content: center;
     padding: 4%;
     margin-top: 7%;
-    background-color: #38323E;
-    font-family: "Hammersmith One", sans-serif;
-    color: #ffffff;
+    background-color: var(--bg-footer-color);
+    color: var(--text-color);
 }
 
-button{
-    display: inline-block;
-    background-color: #ffffff;
-    border: solid 1px #711414;
-    border-radius: 30px;
-    width: 70%;
-    font-family: "Hammersmith One", sans-serif;
-}
+
 
 @media screen and (max-width: 768px) {
     header {
